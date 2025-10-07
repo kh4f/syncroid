@@ -43,7 +43,8 @@
 		},
 		{
 			"matchDepNames": "pnpm",
-			"semanticCommitScope": "package-manager"
+			"semanticCommitScope": "package-manager",
+			"commitMessageTopic": "`{{depName}}`"
 		}
 	]
 }
