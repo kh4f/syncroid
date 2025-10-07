@@ -45,6 +45,11 @@
 			"matchDepNames": "pnpm",
 			"semanticCommitScope": "package-manager",
 			"commitMessageTopic": "`{{depName}}`"
+		},
+		{
+			"matchDepTypes": ["engines"],
+			"semanticCommitScope": "engine",
+			"commitMessageTopic": "`{{depName}}`"
 		}
 	]
 }
