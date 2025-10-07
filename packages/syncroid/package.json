@@ -12,5 +12,10 @@
 	"packageManager": "pnpm@10.18.1",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"type": "module"
+	"type": "module",
+	"scripts": {
+		"build": "tsdown",
+		"build:watch": "tsdown --watch src",
+		"build:prod": "tsdown --production"
+	}
 }

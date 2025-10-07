@@ -12,6 +12,11 @@
 	"packageManager": "pnpm@10.18.1",
 	"main": "dist/index.js",
 	"type": "module",
+	"scripts": {
+		"build": "tsdown",
+		"build:watch": "tsdown --watch src",
+		"build:prod": "tsdown --production"
+	},
 	"dependencies": {
 		"syncroid": "workspace:*"
 	}
