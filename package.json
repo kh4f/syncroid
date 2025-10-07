@@ -1,11 +1,13 @@
 {
 	"name": "syncroid",
 	"version": "0.0.0",
+	"description": "Simple PC ➠ Android file sync tool via ADB",
 	"author": "kh4f <kh4f.dev@gmail.com>",
 	"license": "MIT",
 	"repository": "https://github.com/kh4f/syncroid",
 	"bugs": "https://github.com/kh4f/syncroid/issues",
 	"homepage": "https://github.com/kh4f/syncroid#readme",
+	"keywords": ["syncroid", "vite-plugin-syncroid", "vite-syncroid", "adb", "adb-sync", "adb-nodejs", "vite-adb"],
 	"engines": { "node": "^24.9.0" },
 	"packageManager": "pnpm@10.18.1",
 	"main": "index.js",
