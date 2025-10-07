@@ -1,0 +1,1 @@
+console.log('vite-plugin-syncroid is running')

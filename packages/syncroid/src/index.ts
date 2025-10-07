@@ -1,0 +1,1 @@
+console.log('syncroid is running')
