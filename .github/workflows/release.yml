@@ -30,7 +30,10 @@ jobs:
         run: echo -e "PACKAGE=${TAG%@*}\nVERSION=${TAG#*@}" >> $GITHUB_ENV
 
       - name: Install deps
-        run: pnpm install
+        run: |
+          pnpm install
+          cd packages/${{ env.PACKAGE }}
+          pnpm install
 
       - name: Build
         working-directory: packages/${{ env.PACKAGE }}
