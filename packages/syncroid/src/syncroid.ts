@@ -1,5 +1,5 @@
 import { spawn } from 'node:child_process'
-import { basename, join } from 'node:path'
+import { basename, join } from 'node:path/posix'
 
 const run = (command: string, args: string[] = []) => {
 	const proc = spawn(command, args)
