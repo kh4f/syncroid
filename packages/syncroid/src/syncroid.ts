@@ -1,4 +1,5 @@
 import { spawn } from 'node:child_process'
+import { basename, join } from 'node:path'
 
 const run = (command: string, args: string[] = []) => {
 	const proc = spawn(command, args)
@@ -7,5 +8,10 @@ const run = (command: string, args: string[] = []) => {
 }
 
 export default function syncroid(entries: string[], dest: string) {
+	for (const entry of entries) {
+		if (entry.endsWith('/')) {
+			run('adb', ['shell', 'rm', '-rf', join(dest, basename(entry))])
+		}
+	}
 	run('adb', ['push', ...entries, dest])
 }
