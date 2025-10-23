@@ -18,6 +18,8 @@
 		"build": "tsdown",
 		"build:watch": "tsdown --watch src",
 		"build:prod": "tsdown --production",
+		"lint": "eslint",
+		"lint:fix": "eslint --fix",
 		"release": "pnpm relion",
 		"release:github": "pnpm relion -p github"
 	}

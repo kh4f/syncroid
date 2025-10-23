@@ -2,7 +2,9 @@
 	"type": "module",
 	"scripts": {
 		"build": "pnpm -r build",
-		"build:prod": "pnpm -r build:prod"
+		"build:prod": "pnpm -r build:prod",
+		"lint": "pnpm -r lint",
+		"lint:fix": "pnpm -r lint:fix"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.37.0",
