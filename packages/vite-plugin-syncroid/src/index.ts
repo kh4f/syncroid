@@ -1,1 +1,1 @@
-console.log('vite-plugin-syncroid is running')
+export { default } from '@/plugin'
