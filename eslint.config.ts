@@ -20,6 +20,7 @@ export default defineConfig([
 		],
 		rules: {
 			'@typescript-eslint/restrict-template-expressions': 'off',
+			'@typescript-eslint/no-confusing-void-expression': ['error', { ignoreArrowShorthand: true }],
 		},
 		languageOptions: {
 			parserOptions: {
