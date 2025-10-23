@@ -1,10 +1,10 @@
-import { spawn } from 'node:child_process'
+import { spawnSync } from 'node:child_process'
 import { basename, join } from 'node:path/posix'
 
 const run = (command: string, args: string[] = []) => {
-	const proc = spawn(command, args)
-	proc.stdout.on('data', data => process.stdout.write(`${data}`))
-	proc.stderr.on('data', data => process.stderr.write(`${data}`))
+	const proc = spawnSync(command, args, { encoding: 'utf-8' })
+	if (proc.stdout) process.stdout.write(proc.stdout)
+	if (proc.stderr) process.stderr.write(proc.stderr)
 }
 
 export default function syncroid(entries: string[], dest: string) {
