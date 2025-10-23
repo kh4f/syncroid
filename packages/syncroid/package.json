@@ -21,6 +21,7 @@
 		"lint": "eslint",
 		"lint:fix": "eslint --fix",
 		"release": "pnpm relion",
-		"release:github": "pnpm relion -p github"
+		"release:github": "pnpm relion -p github",
+		"prepack": "cp ../../README.md README.md"
 	}
 }
