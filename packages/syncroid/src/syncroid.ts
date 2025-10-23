@@ -13,5 +13,5 @@ export default function syncroid(entries: string[], dest: string) {
 			run('adb', ['shell', 'rm', '-rf', join(dest, basename(entry))])
 		}
 	}
-	run('adb', ['push', ...entries, dest])
+	run('adb', ['push', ...entries, dest, '--sync'])
 }
