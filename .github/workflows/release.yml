@@ -45,7 +45,8 @@ jobs:
         run: |
           ARCHIVE_NAME=$PACKAGE-v$VERSION.zip
           echo ARCHIVE_NAME=$ARCHIVE_NAME >> $GITHUB_ENV
-          zip -r $ARCHIVE_NAME package.json LICENSE README.md dist
+          README=$([ ${PACKAGE} = syncroid ] && echo ../../README.md || echo README.md)
+          zip -r $ARCHIVE_NAME package.json ../../LICENSE $README dist
 
       - name: Create GitHub release
         working-directory: packages/${{ env.PACKAGE }}
