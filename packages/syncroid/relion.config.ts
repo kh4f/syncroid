@@ -3,5 +3,5 @@ import { baseConfig } from '../../relion.config'
 
 export default defineConfig({
 	...baseConfig,
-	newTagPrefix: 'syncroid@',
+	tagPrefix: 'syncroid@',
 })

@@ -3,5 +3,5 @@ import { baseConfig } from '../../relion.config'
 
 export default defineConfig({
 	...baseConfig,
-	newTagPrefix: 'vite-plugin-syncroid@',
+	tagPrefix: 'vite-plugin-syncroid@',
 })
