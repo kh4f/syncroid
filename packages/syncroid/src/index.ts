@@ -1,1 +1,1 @@
-console.log('syncroid is running')
+export { default } from '@/syncroid'
