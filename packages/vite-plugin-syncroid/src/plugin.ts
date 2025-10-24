@@ -1,4 +1,4 @@
-import { type Plugin } from 'vite'
+import type { Plugin } from 'vite'
 import syncroidCore from 'syncroid'
 
 export default (entries: string[], dest: string): Plugin => ({
