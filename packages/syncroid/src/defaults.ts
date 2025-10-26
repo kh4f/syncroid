@@ -5,4 +5,5 @@ export const defaultConfig: ResolvedConfig = {
 	include: [],
 	exclude: [],
 	dest: '/storage/emulated/0/Syncroid',
+	aggregatePaths: false,
 }

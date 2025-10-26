@@ -3,10 +3,10 @@ import { join } from 'node:path/posix'
 import type { ResolvedConfig } from '@/types'
 
 export const findPaths = (config: ResolvedConfig): string[] => {
-	const result: string[] = []
-
-	const walk = (dir: string) => {
+	const walk = (dir: string): [boolean, string[]] => {
 		const entries = readdirSync(dir, { withFileTypes: true })
+		let isFullyIncluded = true
+		const paths: string[] = []
 
 		for (const entry of entries) {
 			const path = join(dir, entry.name)
@@ -15,14 +15,25 @@ export const findPaths = (config: ResolvedConfig): string[] => {
 			if (isPathExcluded) continue
 
 			if (entry.isDirectory()) {
-				walk(path)
+				const [isSubdirFullyIncluded, subPaths] = walk(path)
+				if (config.aggregatePaths && isSubdirFullyIncluded) {
+					paths.push(path)
+				} else {
+					paths.push(...subPaths)
+					isFullyIncluded = false
+				}
 			} else {
 				const isPathIncluded = config.include.some(r => r.test(path))
-				if (isPathIncluded) result.push(path)
+				if (isPathIncluded) paths.push(path)
+				else isFullyIncluded = false
 			}
 		}
+
+		if (config.aggregatePaths && isFullyIncluded) return [true, [dir]]
+
+		return [isFullyIncluded, paths]
 	}
 
-	walk(config.root)
-	return result
+	const [, paths] = walk(config.root)
+	return paths
 }
