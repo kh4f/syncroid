@@ -1,17 +1,8 @@
 import { basename, join } from 'node:path/posix'
 import { run, findPaths } from '@/utils'
+import type { SyncroidOptions } from '@/types'
 
-export default function syncroid({
-	root,
-	include,
-	exclude = [],
-	dest,
-}: {
-	root: string
-	include: RegExp[]
-	exclude?: RegExp[]
-	dest: string
-}) {
+export default function syncroid({ root, include, exclude = [], dest }: SyncroidOptions) {
 	const entries = findPaths(root, include, exclude)
 
 	for (const entry of entries) {
