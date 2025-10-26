@@ -4,6 +4,6 @@ export interface FinderOptions {
 	exclude?: RegExp[]
 }
 
-export interface SyncroidOptions extends FinderOptions {
+export interface UserConfig extends FinderOptions {
 	dest: string
 }

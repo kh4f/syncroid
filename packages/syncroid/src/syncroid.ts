@@ -1,8 +1,8 @@
 import { basename, join } from 'node:path/posix'
 import { run, findPaths } from '@/utils'
-import type { SyncroidOptions } from '@/types'
+import type { UserConfig } from '@/types'
 
-export default function syncroid(opts: SyncroidOptions) {
+export default function syncroid(opts: UserConfig) {
 	const entries = findPaths(opts)
 
 	for (const entry of entries) {
