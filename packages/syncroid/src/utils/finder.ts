@@ -3,7 +3,6 @@ import { join } from 'node:path/posix'
 import type { ResolvedConfig } from '@/types'
 
 export const findPaths = (config: ResolvedConfig): string[] => {
-	const { root, include = [], exclude = [] } = config
 	const result: string[] = []
 
 	const walk = (dir: string) => {
@@ -12,18 +11,18 @@ export const findPaths = (config: ResolvedConfig): string[] => {
 		for (const entry of entries) {
 			const path = join(dir, entry.name)
 
-			const isPathExcluded = exclude.some(r => r.test(path))
+			const isPathExcluded = config.exclude.some(r => r.test(path))
 			if (isPathExcluded) continue
 
 			if (entry.isDirectory()) {
 				walk(path)
 			} else {
-				const isPathIncluded = include.some(r => r.test(path))
+				const isPathIncluded = config.include.some(r => r.test(path))
 				if (isPathIncluded) result.push(path)
 			}
 		}
 	}
 
-	walk(root)
+	walk(config.root)
 	return result
 }
