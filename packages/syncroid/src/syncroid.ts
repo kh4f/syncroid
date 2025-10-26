@@ -1,6 +1,5 @@
 import { basename, join } from 'node:path/posix'
-import { findPaths } from '@/utils/finder'
-import { run } from '@/utils/runner'
+import { run, findPaths } from '@/utils'
 
 export default function syncroid(root: string, include: RegExp[], dest: string) {
 	const entries = findPaths(root, include)
