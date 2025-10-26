@@ -1,8 +1,8 @@
 import { readdirSync } from 'node:fs'
 import { join } from 'node:path/posix'
-import type { FinderOptions } from '@/types'
+import type { UserConfig } from '@/types'
 
-export const findPaths = (opts: FinderOptions): string[] => {
+export const findPaths = (opts: UserConfig): string[] => {
 	const { root, include, exclude = [] } = opts
 	const result: string[] = []
 

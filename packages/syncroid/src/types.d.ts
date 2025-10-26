@@ -1,9 +1,6 @@
-export interface FinderOptions {
+export interface UserConfig {
 	root: string
 	include: RegExp[]
 	exclude?: RegExp[]
-}
-
-export interface UserConfig extends FinderOptions {
 	dest: string
 }
