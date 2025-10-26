@@ -3,7 +3,7 @@ import { run, findPaths } from '@/utils'
 import type { SyncroidOptions } from '@/types'
 
 export default function syncroid(opts: SyncroidOptions) {
-	const entries = findPaths(opts.root, opts.include, opts.exclude)
+	const entries = findPaths(opts)
 
 	for (const entry of entries) {
 		if (entry.endsWith('/')) {

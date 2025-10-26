@@ -1,7 +1,9 @@
 import { readdirSync } from 'node:fs'
 import { join } from 'node:path/posix'
+import type { FinderOptions } from '@/types'
 
-export function findPaths(root: string, include: RegExp[], exclude: RegExp[] = []): string[] {
+export function findPaths(opts: FinderOptions): string[] {
+	const { root, include, exclude = [] } = opts
 	const result: string[] = []
 
 	function walk(dir: string) {
