@@ -1,6 +1,6 @@
 export interface UserConfig {
 	root: string
-	include: RegExp[]
+	include?: RegExp[]
 	exclude?: RegExp[]
 	dest: string
 }

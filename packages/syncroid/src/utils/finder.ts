@@ -3,7 +3,7 @@ import { join } from 'node:path/posix'
 import type { UserConfig } from '@/types'
 
 export const findPaths = (opts: UserConfig): string[] => {
-	const { root, include, exclude = [] } = opts
+	const { root, include = [], exclude = [] } = opts
 	const result: string[] = []
 
 	const walk = (dir: string) => {
