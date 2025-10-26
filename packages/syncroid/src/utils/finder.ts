@@ -1,9 +1,9 @@
 import { readdirSync } from 'node:fs'
 import { join } from 'node:path/posix'
-import type { UserConfig } from '@/types'
+import type { ResolvedConfig } from '@/types'
 
-export const findPaths = (opts: UserConfig): string[] => {
-	const { root, include = [], exclude = [] } = opts
+export const findPaths = (config: ResolvedConfig): string[] => {
+	const { root, include = [], exclude = [] } = config
 	const result: string[] = []
 
 	const walk = (dir: string) => {

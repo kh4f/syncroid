@@ -1,6 +1,8 @@
 export interface UserConfig {
-	root: string
+	root?: string
 	include?: RegExp[]
 	exclude?: RegExp[]
-	dest: string
+	dest?: string
 }
+
+export type ResolvedConfig = Required<UserConfig>
