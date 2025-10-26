@@ -11,7 +11,7 @@ export const findPaths = (config: ResolvedConfig): string[] => {
 		for (const entry of entries) {
 			const path = join(dir, entry.name)
 
-			const isPathExcluded = config.exclude.some(r => r.test(path))
+			const isPathExcluded = config.excludePatterns.some(r => r.test(path))
 			if (isPathExcluded) continue
 
 			if (entry.isDirectory()) {
@@ -23,7 +23,7 @@ export const findPaths = (config: ResolvedConfig): string[] => {
 					isFullyIncluded = false
 				}
 			} else {
-				const isPathIncluded = config.include.some(r => r.test(path))
+				const isPathIncluded = config.includePattern.some(r => r.test(path))
 				if (isPathIncluded) paths.push(path)
 				else isFullyIncluded = false
 			}
