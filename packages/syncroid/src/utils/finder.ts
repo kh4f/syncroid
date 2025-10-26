@@ -2,11 +2,11 @@ import { readdirSync } from 'node:fs'
 import { join } from 'node:path/posix'
 import type { FinderOptions } from '@/types'
 
-export function findPaths(opts: FinderOptions): string[] {
+export const findPaths = (opts: FinderOptions): string[] => {
 	const { root, include, exclude = [] } = opts
 	const result: string[] = []
 
-	function walk(dir: string) {
+	const walk = (dir: string) => {
 		const entries = readdirSync(dir, { withFileTypes: true })
 
 		for (const entry of entries) {
