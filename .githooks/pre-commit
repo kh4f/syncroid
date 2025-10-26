@@ -1,0 +1,15 @@
+#!/bin/bash
+
+branch="$(git branch --show-current)"
+
+if [ "$branch" != "main" ]; then
+	echo "[PRE-COMMIT] Not on main branch, skipping hook."
+	exit 0
+fi
+
+staged_files="$(git diff --cached --name-only --diff-filter=ACMR)"
+if [ -n "$staged_files" ]; then
+	pnpm eslint $staged_files
+else
+	echo '[PRE-COMMIT] No staged files to lint.'
+fi

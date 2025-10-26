@@ -4,7 +4,8 @@
 		"build": "pnpm -r build",
 		"build:prod": "pnpm -r build:prod",
 		"lint": "pnpm -r lint",
-		"lint:fix": "pnpm -r lint:fix"
+		"lint:fix": "pnpm -r lint:fix",
+		"prepare": "git config core.hooksPath .githooks"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.38.0",
