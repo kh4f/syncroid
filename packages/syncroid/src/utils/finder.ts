@@ -1,7 +1,7 @@
 import { readdirSync } from 'node:fs'
 import { join } from 'node:path/posix'
 
-export function findPaths(root: string, include: RegExp[]): string[] {
+export function findPaths(root: string, include: RegExp[], exclude: RegExp[] = []): string[] {
 	const result: string[] = []
 
 	function walk(dir: string) {
@@ -9,6 +9,9 @@ export function findPaths(root: string, include: RegExp[]): string[] {
 
 		for (const entry of entries) {
 			const path = join(dir, entry.name)
+
+			const isPathExcluded = exclude.some(r => r.test(path))
+			if (isPathExcluded) continue
 
 			if (entry.isDirectory()) {
 				walk(path)
