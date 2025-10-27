@@ -30,7 +30,7 @@ importers:
         specifier: ^0.26.0
         version: 0.26.0
       tsdown:
-        specifier: ^0.15.6
+        specifier: ^0.15.9
         version: 0.15.9(typescript@5.9.3)
       tsx:
         specifier: ^4.20.6

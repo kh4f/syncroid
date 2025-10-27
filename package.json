@@ -15,7 +15,7 @@
 		"globals": "^16.4.0",
 		"jiti": "^2.6.1",
 		"relion": "^0.26.0",
-		"tsdown": "^0.15.6",
+		"tsdown": "^0.15.9",
 		"tsx": "^4.20.6",
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.46.0"
