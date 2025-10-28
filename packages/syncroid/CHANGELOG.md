@@ -1,6 +1,26 @@
 # Changelog
 
 
+## &ensp; [` 📦 syncroid@0.2.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.1.0...syncroid@0.2.0)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ BREAKING CHANGES
+- `include` and `exclude` config options have been renamed to `includePattern` and `excludePatterns`. <sup>[1]</sup>
+- The `syncroid` function signature was changed. Now it accepts an options object with optional `exclude` paths. <sup>[2]</sup>
+- `syncroid` signature changed to accept `root` and `include` RegExp array instead of entry list. <sup>[3]</sup>
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
+- **finder**: 
+  - add `aggregatePaths` option to return parent directory if all children match [`2d53c05`](https://github.com/kh4f/syncroid/commit/2d53c05)
+  - add support for excluding paths [`dedeeaa`](https://github.com/kh4f/syncroid/commit/dedeeaa)
+- **config**: make `root` and `dest` options optional [`c1c7bbd`](https://github.com/kh4f/syncroid/commit/c1c7bbd)
+- **syncroid**: switch to recursive regex-based path matching [`a2c498d`](https://github.com/kh4f/syncroid/commit/a2c498d) ⚠️<sup>[3]</sup>
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🚜 Refactoring
+- **syncroid**: accept options object and support `exclude` paths [`6c35180`](https://github.com/kh4f/syncroid/commit/6c35180) ⚠️<sup>[2]</sup>
+
+##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.1.0...syncroid@0.2.0) &ensp;•&ensp; _Oct 26, 2025_
+
+
 ## &ensp; [` 📦 syncroid@0.1.0  `](https://github.com/kh4f/syncroid/commits/syncroid@0.1.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
