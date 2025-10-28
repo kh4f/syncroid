@@ -16,6 +16,7 @@
 - **syncroid**: switch to recursive regex-based path matching [`a2c498d`](https://github.com/kh4f/syncroid/commit/a2c498d) ⚠️<sup>[3]</sup>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🚜 Refactoring
+- **config**: rename `include`/`exclude` to `includePattern`/`excludePatterns` [`c5b4e32`](https://github.com/kh4f/syncroid/commit/c5b4e32) ⚠️<sup>[1]</sup>
 - **syncroid**: accept options object and support `exclude` paths [`6c35180`](https://github.com/kh4f/syncroid/commit/6c35180) ⚠️<sup>[2]</sup>
 
 ##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.1.0...syncroid@0.2.0) &ensp;•&ensp; _Oct 26, 2025_
