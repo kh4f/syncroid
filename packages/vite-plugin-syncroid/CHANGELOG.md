@@ -10,5 +10,3 @@
 - **deps**: add `vite` to `devDependencies` and `peerDependencies` [`8127a14`](https://github.com/kh4f/syncroid/commit/8127a14)
 
 ##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/commits/vite-plugin-syncroid@0.1.0) &ensp;•&ensp; _Oct 23, 2025_
-
-
