@@ -19,7 +19,7 @@ export const baseConfig: UserConfig = {
 			output: 'stdout',
 			commitRange: 'latest-release',
 			header: '',
-			partials: { header: '', body: 'from-file' },
+			partials: { header: '', body: '{{fromFile}}' },
 		},
 	},
 }
