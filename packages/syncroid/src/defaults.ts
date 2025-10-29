@@ -4,6 +4,6 @@ export const defaultConfig: ResolvedConfig = {
 	root: '.',
 	include: ['**'],
 	exclude: ['**/node_modules', '**/.git'],
-	dest: '/storage/emulated/0/Syncroid',
+	dest: '/storage/emulated/0/documents/syncroid',
 	aggregatePaths: false,
 }
