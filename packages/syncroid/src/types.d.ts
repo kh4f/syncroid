@@ -1,7 +1,7 @@
 export interface UserConfig {
 	root?: string
-	include?: (RegExp | string)[]
-	exclude?: (RegExp | string)[]
+	include?: (string | RegExp | (string | RegExp)[])[]
+	exclude?: (string | RegExp | (string | RegExp)[])[]
 	dest?: string
 	aggregatePaths?: boolean
 }
