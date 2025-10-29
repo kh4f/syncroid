@@ -17,10 +17,12 @@ export const findPaths = (config: ResolvedConfig): string[] => {
 		const entries = readdirSync(dir, { withFileTypes: true })
 		let isFullyIncluded = true
 		const paths: string[] = []
+
 		for (const entry of entries) {
 			const path = join(dir, entry.name)
 			const isPathExcluded = matches(path, config.exclude)
 			if (isPathExcluded) continue
+
 			if (entry.isDirectory()) {
 				const [isSubdirFullyIncluded, subPaths] = walk(path)
 				if (config.aggregatePaths && isSubdirFullyIncluded && subPaths.length > 0) {
