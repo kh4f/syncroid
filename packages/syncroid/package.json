@@ -23,5 +23,8 @@
 		"release": "pnpm relion",
 		"release:github": "pnpm relion -p github",
 		"prepack": "cp ../../README.md README.md"
+	},
+	"dependencies": {
+		"minimatch": "^10.1.1"
 	}
 }

@@ -1,6 +1,12 @@
 import { readdirSync } from 'node:fs'
 import { join } from 'node:path/posix'
+import { minimatch } from 'minimatch'
 import type { ResolvedConfig } from '@/types'
+
+const matchesPattern = (value: string, pattern: string | RegExp) => {
+	if (typeof pattern === 'string') return minimatch(value, pattern)
+	return pattern.test(value)
+}
 
 export const findPaths = (config: ResolvedConfig): string[] => {
 	const walk = (dir: string): [boolean, string[]] => {
@@ -11,7 +17,7 @@ export const findPaths = (config: ResolvedConfig): string[] => {
 		for (const entry of entries) {
 			const path = join(dir, entry.name)
 
-			const isPathExcluded = config.excludePatterns.some(r => r.test(path))
+			const isPathExcluded = config.excludePatterns.some(p => matchesPattern(path, p))
 			if (isPathExcluded) continue
 
 			if (entry.isDirectory()) {
@@ -23,7 +29,7 @@ export const findPaths = (config: ResolvedConfig): string[] => {
 					isFullyIncluded = false
 				}
 			} else {
-				const isPathIncluded = config.includePattern.some(r => r.test(path))
+				const isPathIncluded = config.includePattern.some(p => matchesPattern(path, p))
 				if (isPathIncluded) paths.push(path)
 				else isFullyIncluded = false
 			}
