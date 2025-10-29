@@ -2,8 +2,8 @@ import type { ResolvedConfig } from '@/types'
 
 export const defaultConfig: ResolvedConfig = {
 	root: '.',
-	includePattern: [],
-	excludePatterns: [],
+	include: [],
+	exclude: [],
 	dest: '/storage/emulated/0/Syncroid',
 	aggregatePaths: false,
 }
