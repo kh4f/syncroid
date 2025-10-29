@@ -13,5 +13,6 @@ export default function syncroid(config: UserConfig) {
 
 	if (dirsToRemove.length) run('adb', ['shell', 'rm', '-rf', ...dirsToRemove])
 
+	run('adb', ['shell', 'mkdir', '-p', resolvedConfig.dest])
 	run('adb', ['push', ...entries, resolvedConfig.dest, '--sync'])
 }
