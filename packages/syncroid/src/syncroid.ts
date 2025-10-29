@@ -6,11 +6,12 @@ export default function syncroid(config: UserConfig) {
 	const resolvedConfig = resolveConfig(config)
 	const entries = findPaths(resolvedConfig)
 
-	for (const entry of entries) {
-		if (entry.endsWith('/')) {
-			run('adb', ['shell', 'rm', '-rf', join(resolvedConfig.dest, basename(entry))])
-		}
-	}
+	const dirsToRemove: string[] = []
+	for (const entry of entries)
+		if (entry.endsWith('/'))
+			dirsToRemove.push(join(resolvedConfig.dest, basename(entry)))
+
+	if (dirsToRemove.length) run('adb', ['shell', 'rm', '-rf', ...dirsToRemove])
 
 	run('adb', ['push', ...entries, resolvedConfig.dest, '--sync'])
 }
