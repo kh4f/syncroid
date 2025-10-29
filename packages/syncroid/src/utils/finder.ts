@@ -26,7 +26,7 @@ export const findPaths = (config: ResolvedConfig): string[] => {
 			if (entry.isDirectory()) {
 				const [isSubdirFullyIncluded, subPaths] = walk(path)
 				if (config.aggregatePaths && isSubdirFullyIncluded && subPaths.length > 0) {
-					paths.push(path)
+					paths.push(`${path}/`)
 				} else {
 					paths.push(...subPaths)
 					isFullyIncluded = false
@@ -38,7 +38,7 @@ export const findPaths = (config: ResolvedConfig): string[] => {
 			}
 		}
 
-		if (config.aggregatePaths && isFullyIncluded && paths.length > 0) return [true, [dir]]
+		if (config.aggregatePaths && isFullyIncluded && paths.length > 0) return [true, [`${dir}/`]]
 		return [isFullyIncluded, paths]
 	}
 
