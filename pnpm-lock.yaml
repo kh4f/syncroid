@@ -27,8 +27,8 @@ importers:
         specifier: ^2.6.1
         version: 2.6.1
       relion:
-        specifier: ^0.28.0
-        version: 0.28.0
+        specifier: ^0.29.0
+        version: 0.29.0
       tsdown:
         specifier: ^0.15.10
         version: 0.15.12(typescript@5.9.3)
@@ -1024,8 +1024,8 @@ packages:
     resolution: {integrity: sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==}
     engines: {node: '>= 14.18.0'}
 
-  relion@0.28.0:
-    resolution: {integrity: sha512-t7tKSmMJiSGY3qjvScaasl8GHCftGq2UvOYQIkOEa42Im529JnJUC142S568Fc+jJRFoHI0yiMvOlXazs61IpQ==}
+  relion@0.29.0:
+    resolution: {integrity: sha512-nN73pTkFsuX6fQUhLSKI68OwJgHm+JFSjZknt7LkNADHJO8FztAWQ1ayUDqsRaMS9hcxVDd56pi/wLTbENT++w==}
     engines: {node: ^24.10.0}
     hasBin: true
 
@@ -2090,7 +2090,7 @@ snapshots:
 
   readdirp@4.1.2: {}
 
-  relion@0.28.0:
+  relion@0.29.0:
     dependencies:
       cleye: 1.3.4
       handlebars: 4.7.8
