@@ -12,6 +12,6 @@ export const logVerbose = (...args: unknown[]) => {
 	if (logLevel === 'verbose') log(...args)
 }
 
-export const logError = (...args: unknown[]) => {
-	console.error('[syncroid]', ...args)
+export const throwError = (message: string) => {
+	throw new Error(`[syncroid] Error: ${message}`)
 }
