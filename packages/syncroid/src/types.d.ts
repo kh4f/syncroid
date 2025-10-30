@@ -1,6 +1,6 @@
 export interface UserConfig {
 	source?: string
-	include?: ['**']
+	include?: FilterPattern[]
 	exclude?: FilterPattern[]
 	dest?: string
 	logLevel?: LogLevel
