@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 syncroid@0.5.0  `](https://github.com/kh4f/syncroid/compare/syncroid@0.4.0...syncroid@0.5.0)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
+- **core**: export types from `@/types` in package entrypoint [`1cb253c`](https://github.com/kh4f/syncroid/commit/1cb253c)
+
+##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/syncroid@0.4.0...syncroid@0.5.0) &ensp;•&ensp; _Oct 30, 2025_
+
+
 ## &ensp; [` 📦 syncroid@0.4.0  `](https://github.com/kh4f/syncroid/compare/syncroid@0.3.0...syncroid@0.4.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ BREAKING CHANGES
