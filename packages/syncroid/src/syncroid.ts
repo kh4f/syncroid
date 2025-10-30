@@ -13,8 +13,9 @@ export default function syncroid(config: UserConfig) {
 		if (entry.endsWith('/'))
 			dirsToRemove.push(join(resolvedConfig.dest, basename(entry)))
 
-	if (dirsToRemove.length) run('adb', ['shell', 'rm', '-rf', ...dirsToRemove])
+	if (dirsToRemove.length)
+		if (!run('adb', ['shell', 'rm', '-rf', ...dirsToRemove])) return
 
 	for (const entry of entries)
-		run('adb', ['push', entry, join(resolvedConfig.dest, entry), '--sync'])
+		if (!run('adb', ['push', entry, join(resolvedConfig.dest, entry), '--sync'])) return
 }
