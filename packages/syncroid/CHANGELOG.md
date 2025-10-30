@@ -1,6 +1,27 @@
 # Changelog
 
 
+## &ensp; [` 📦 syncroid@0.3.0  `](https://github.com/kh4f/syncroid/compare/syncroid@0.2.0...syncroid@0.3.0)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ BREAKING CHANGES
+- The `include`, `exclude`, and `aggregatePaths` options have been removed. Syncroid now performs a full directory sync. <sup>[1]</sup>
+- The default destination path for syncing files has been changed to `/storage/emulated/0/documents/syncroid`. <sup>[2]</sup>
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
+- **syncroid**: 
+  - remove files from destination that no longer exist in source [`eb84453`](https://github.com/kh4f/syncroid/commit/eb84453)
+  - abort sync on runner failure [`687bf1d`](https://github.com/kh4f/syncroid/commit/687bf1d)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚡ Performance
+- **syncroid**: batch directory removals into single `adb` call [`7d563da`](https://github.com/kh4f/syncroid/commit/7d563da)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🚜 Refactoring
+- **syncroid**: remove granular file selection, always mirror all files [`a6d0dc9`](https://github.com/kh4f/syncroid/commit/a6d0dc9) ⚠️<sup>[1]</sup>
+- **defaults**: change default `dest` path to `/storage/emulated/0/documents/syncroid` [`d21639b`](https://github.com/kh4f/syncroid/commit/d21639b) ⚠️<sup>[2]</sup>
+
+##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/syncroid@0.2.0...syncroid@0.3.0) &ensp;•&ensp; _Oct 30, 2025_
+
+
 ## &ensp; [` 📦 syncroid@0.2.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.1.0...syncroid@0.2.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ BREAKING CHANGES
