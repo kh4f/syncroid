@@ -23,5 +23,5 @@ export default function syncroid(config: UserConfig) {
 	for (const sourceFile of sourceFiles)
 		run('adb', ['push', join(source, sourceFile), join(resolvedConfig.dest, sourceFile), '--sync'])
 
-	log(`Pushed: ${sourceFiles.length}, removed: ${filesToRemove.length}.`)
+	log(`Pushed: ${sourceFiles.length}${filesToRemove.length ? `, removed: ${filesToRemove.length}` : ''}`)
 }
