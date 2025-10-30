@@ -1,6 +1,27 @@
 # Changelog
 
 
+## &ensp; [` 📦 syncroid@0.4.0  `](https://github.com/kh4f/syncroid/compare/syncroid@0.3.0...syncroid@0.4.0)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ BREAKING CHANGES
+- Removed support for `verbose` value in `logLevel` config property. <sup>[1]</sup>
+- The configuration option `root` has been renamed to `source`. <sup>[2]</sup>
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
+- **syncroid**: 
+  - add logging for sync progress [`ab7c16f`](https://github.com/kh4f/syncroid/commit/ab7c16f)
+  - support `include`/`exclude` pattern-based file filtering [`d003c72`](https://github.com/kh4f/syncroid/commit/d003c72)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🩹 Fixes
+- **syncroid**: prevent error if destination directory does not exist [`4b05d8f`](https://github.com/kh4f/syncroid/commit/4b05d8f)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🚜 Refactoring
+- **utils**: simplify logging and error handling [`98d5ad3`](https://github.com/kh4f/syncroid/commit/98d5ad3) ⚠️<sup>[1]</sup>
+- **syncroid**: rename `root` option to `source` [`8127f4e`](https://github.com/kh4f/syncroid/commit/8127f4e) ⚠️<sup>[2]</sup>
+
+##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/syncroid@0.3.0...syncroid@0.4.0) &ensp;•&ensp; _Oct 30, 2025_
+
+
 ## &ensp; [` 📦 syncroid@0.3.0  `](https://github.com/kh4f/syncroid/compare/syncroid@0.2.0...syncroid@0.3.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ BREAKING CHANGES
