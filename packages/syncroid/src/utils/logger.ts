@@ -7,11 +7,3 @@ export const setLogLevel = (value: LogLevel) => logLevel = value
 export const log = (...args: unknown[]) => {
 	if (logLevel !== 'silent') console.log('[syncroid]', ...args)
 }
-
-export const logVerbose = (...args: unknown[]) => {
-	if (logLevel === 'verbose') log(...args)
-}
-
-export const throwError = (message: string) => {
-	throw new Error(`[syncroid] Error: ${message}`)
-}

@@ -10,4 +10,4 @@ export type ResolvedConfig = Required<UserConfig>
 
 export type FilterPattern = string | RegExp | (string | RegExp)[]
 
-export type LogLevel = 'verbose' | 'minimal' | 'silent'
+export type LogLevel = 'minimal' | 'silent'
