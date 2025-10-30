@@ -1,20 +1,22 @@
 import { join, relative } from 'node:path/posix'
-import { run, resolveConfig, findAllFiles } from '@/utils'
+import { run, resolveConfig, findAllFiles, filterPaths } from '@/utils'
 import type { UserConfig } from '@/types'
 import { setLogLevel } from '@/utils'
 
 export default function syncroid(config: UserConfig) {
 	const resolvedConfig = resolveConfig(config)
-	setLogLevel(resolvedConfig.logLevel)
+	const { root, include, exclude, dest, logLevel } = resolvedConfig
+	setLogLevel(logLevel)
 
-	const sourceFiles = findAllFiles(resolvedConfig.root)
-	const destFiles = run('adb', ['shell', 'find', resolvedConfig.dest, '-type', 'f']).split('\n').map(s => s.trim())
+	const sourceFiles = filterPaths(findAllFiles(root), include, exclude)
+	console.log(sourceFiles)
+	const destFiles = filterPaths(run('adb', ['shell', 'find', dest, '-type', 'f']).split('\n')
+		.map(p => relative(dest, p.trim())), include, exclude)
 
 	const filesToRemove: string[] = []
-	for (const destFile of destFiles) {
-		const sourceEntry = relative(resolvedConfig.dest, destFile)
-		if (!sourceFiles.includes(sourceEntry)) filesToRemove.push(destFile)
-	}
+	for (const destFile of destFiles)
+		if (!sourceFiles.includes(destFile)) filesToRemove.push(destFile)
+
 	if (filesToRemove.length) run('adb', ['shell', 'rm', '-rf', ...filesToRemove])
 
 	for (const sourceFile of sourceFiles)
