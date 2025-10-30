@@ -2,7 +2,7 @@ import { minimatch } from 'minimatch'
 import type { FilterPattern } from '@/types'
 
 const matchesPattern = (value: string, pattern: string | RegExp) =>
-	typeof pattern === 'string' ? minimatch(value, pattern) : pattern.test(value)
+	typeof pattern === 'string' ? minimatch(value, pattern, { dot: true }) : pattern.test(value)
 
 const matchesAllPatterns = (value: string, patterns: (string | RegExp)[]) =>
 	patterns.every(p => matchesPattern(value, p))
