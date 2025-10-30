@@ -6,4 +6,5 @@ export const defaultConfig: ResolvedConfig = {
 	exclude: ['**/node_modules/**', '**/.git/**'],
 	dest: '/storage/emulated/0/documents/syncroid',
 	logLevel: 'minimal',
+	configPath: 'syncroid.config.ts',
 }

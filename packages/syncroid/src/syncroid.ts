@@ -1,13 +1,13 @@
 import { join, relative } from 'node:path/posix'
-import { run, resolveConfig, findAllFiles, filterPaths } from '@/utils'
+import { run, resolveConfig, findAllFiles, filterPaths, loadConfigFile } from '@/utils'
 import { setLogLevel, log } from '@/utils'
 import type { UserConfig } from '@/types'
 
-export default function syncroid(config: UserConfig) {
+export default async function syncroid(config: UserConfig) {
+	config = await loadConfigFile(config.configPath ?? 'syncroid.config.ts') ?? config
 	const resolvedConfig = resolveConfig(config)
 	const { source, include, exclude, dest, logLevel } = resolvedConfig
 	setLogLevel(logLevel)
-
 	log('Syncing...')
 
 	const sourceFiles = filterPaths(findAllFiles(source).map(p => relative(source, p)), include, exclude)

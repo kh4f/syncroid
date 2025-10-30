@@ -4,6 +4,7 @@ export interface UserConfig {
 	exclude?: FilterPattern[]
 	dest?: string
 	logLevel?: LogLevel
+	configPath?: string
 }
 
 export type ResolvedConfig = Required<UserConfig>
