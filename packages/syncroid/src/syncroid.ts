@@ -1,9 +1,11 @@
 import { basename, join } from 'node:path/posix'
 import { run, resolveConfig, findPaths } from '@/utils'
 import type { UserConfig } from '@/types'
+import { setLogLevel } from '@/utils'
 
 export default function syncroid(config: UserConfig) {
 	const resolvedConfig = resolveConfig(config)
+	setLogLevel(resolvedConfig.logLevel)
 	const entries = findPaths(resolvedConfig)
 
 	const dirsToRemove: string[] = []

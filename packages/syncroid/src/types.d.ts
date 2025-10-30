@@ -4,6 +4,9 @@ export interface UserConfig {
 	exclude?: (string | RegExp | (string | RegExp)[])[]
 	dest?: string
 	aggregatePaths?: boolean
+	logLevel?: LogLevel
 }
 
 export type ResolvedConfig = Required<UserConfig>
+
+export type LogLevel = 'verbose' | 'minimal' | 'silent'
