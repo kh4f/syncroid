@@ -14,7 +14,7 @@ export const baseConfig: UserConfig = {
 	_github: {
 		lifecycle: ['changelog'],
 		logLevel: 'silent',
-		context: { commitRefLinks: false, footerChangelogUrl: true },
+		context: { commitRefLinks: false, footerChangelogUrl: true, isMonorepo: true },
 		changelog: {
 			output: 'stdout',
 			commitRange: 'latest-release',
