@@ -1,7 +1,7 @@
 import { join, relative } from 'node:path/posix'
 import { run, resolveConfig, findAllFiles, filterPaths } from '@/utils'
-import type { UserConfig } from '@/types'
 import { setLogLevel, log } from '@/utils'
+import type { UserConfig } from '@/types'
 
 export default function syncroid(config: UserConfig) {
 	const resolvedConfig = resolveConfig(config)
