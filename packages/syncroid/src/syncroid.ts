@@ -10,7 +10,7 @@ export default function syncroid(config: UserConfig) {
 
 	log('Syncing...')
 
-	const sourceFiles = filterPaths(findAllFiles(source), include, exclude)
+	const sourceFiles = filterPaths(findAllFiles(source).map(p => relative(source, p)), include, exclude)
 	const destFiles = filterPaths(run('adb', ['shell', `test -d ${dest} && find ${dest} -type f`]).split('\n')
 		.map(p => relative(dest, p.trim())), include, exclude)
 
@@ -21,7 +21,7 @@ export default function syncroid(config: UserConfig) {
 	if (filesToRemove.length) run('adb', ['shell', 'rm', '-rf', ...filesToRemove])
 
 	for (const sourceFile of sourceFiles)
-		run('adb', ['push', sourceFile, join(resolvedConfig.dest, sourceFile), '--sync'])
+		run('adb', ['push', join(source, sourceFile), join(resolvedConfig.dest, sourceFile), '--sync'])
 
 	log(`Pushed: ${sourceFiles.length}, removed: ${filesToRemove.length}.`)
 }
