@@ -1,12 +1,14 @@
 import { join, relative } from 'node:path/posix'
 import { run, resolveConfig, findAllFiles, filterPaths } from '@/utils'
 import type { UserConfig } from '@/types'
-import { setLogLevel } from '@/utils'
+import { setLogLevel, log } from '@/utils'
 
 export default function syncroid(config: UserConfig) {
 	const resolvedConfig = resolveConfig(config)
 	const { source, include, exclude, dest, logLevel } = resolvedConfig
 	setLogLevel(logLevel)
+
+	log('Syncing...')
 
 	const sourceFiles = filterPaths(findAllFiles(source), include, exclude)
 	const destFiles = filterPaths(run('adb', ['shell', `test -d ${dest} && find ${dest} -type f`]).split('\n')
@@ -20,4 +22,6 @@ export default function syncroid(config: UserConfig) {
 
 	for (const sourceFile of sourceFiles)
 		run('adb', ['push', sourceFile, join(resolvedConfig.dest, sourceFile), '--sync'])
+
+	log(`Pushed: ${sourceFiles.length}, removed: ${filesToRemove.length}.`)
 }
