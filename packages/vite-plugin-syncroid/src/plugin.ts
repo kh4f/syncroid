@@ -1,7 +1,7 @@
 import type { Plugin } from 'vite'
 import syncroidCore from 'syncroid'
 
-export default (entries: string[], dest: string): Plugin => ({
+export default (args: Parameters<typeof syncroidCore>): Plugin => ({
 	name: 'vite-plugin-syncroid',
-	closeBundle: () => syncroidCore(entries, dest),
+	closeBundle: () => syncroidCore(...args),
 })
