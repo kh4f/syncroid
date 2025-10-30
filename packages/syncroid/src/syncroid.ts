@@ -9,7 +9,6 @@ export default function syncroid(config: UserConfig) {
 	setLogLevel(logLevel)
 
 	const sourceFiles = filterPaths(findAllFiles(source), include, exclude)
-	console.log(sourceFiles)
 	const destFiles = filterPaths(run('adb', ['shell', `test -d ${dest} && find ${dest} -type f`]).split('\n')
 		.map(p => relative(dest, p.trim())), include, exclude)
 
