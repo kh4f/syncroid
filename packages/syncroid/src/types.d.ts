@@ -1,5 +1,5 @@
 export interface UserConfig {
-	root?: string
+	source?: string
 	include?: ['**']
 	exclude?: FilterPattern[]
 	dest?: string

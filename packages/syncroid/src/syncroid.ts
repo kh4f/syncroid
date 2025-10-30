@@ -5,10 +5,10 @@ import { setLogLevel } from '@/utils'
 
 export default function syncroid(config: UserConfig) {
 	const resolvedConfig = resolveConfig(config)
-	const { root, include, exclude, dest, logLevel } = resolvedConfig
+	const { source, include, exclude, dest, logLevel } = resolvedConfig
 	setLogLevel(logLevel)
 
-	const sourceFiles = filterPaths(findAllFiles(root), include, exclude)
+	const sourceFiles = filterPaths(findAllFiles(source), include, exclude)
 	console.log(sourceFiles)
 	const destFiles = filterPaths(run('adb', ['shell', 'find', dest, '-type', 'f']).split('\n')
 		.map(p => relative(dest, p.trim())), include, exclude)
