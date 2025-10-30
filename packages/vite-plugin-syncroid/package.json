@@ -1,6 +1,6 @@
 {
 	"name": "vite-plugin-syncroid",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Vite plugin for PC ➠ Android file sync",
 	"author": "kh4f <kh4f.dev@gmail.com>",
 	"license": "MIT",
