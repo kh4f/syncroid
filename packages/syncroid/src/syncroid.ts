@@ -8,7 +8,7 @@ export default async function syncroid(config: UserConfig) {
 	const resolvedConfig = resolveConfig(config)
 	const { source, include, exclude, dest, logLevel } = resolvedConfig
 	setLogLevel(logLevel)
-	log('Syncing...')
+	log(`Syncing: '${source}' → '${dest}'`)
 
 	const sourceFiles = filterPaths(findAllFiles(source).map(p => relative(source, p)), include, exclude)
 	const destFiles = filterPaths(run('adb', ['shell', `test -d ${dest} && find ${dest} -type f`]).split('\n')
