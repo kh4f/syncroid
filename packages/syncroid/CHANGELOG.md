@@ -1,6 +1,24 @@
 # Changelog
 
 
+## &ensp; [` 📦 syncroid@0.6.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.2.0...syncroid@0.6.0)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
+- **config**: add support for external config file with priority [`b0c004b`](https://github.com/kh4f/syncroid/commit/b0c004b)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🩹 Fixes
+- **config-loader**: use `join` from `node:path/posix` for config path resolution [`4a582e7`](https://github.com/kh4f/syncroid/commit/4a582e7)
+- **syncroid**: handle absolute `source` paths correctly [`3695fe8`](https://github.com/kh4f/syncroid/commit/3695fe8)
+- **filterer**: include dot folders in path filtering [`2a10f27`](https://github.com/kh4f/syncroid/commit/2a10f27)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🚜 Refactoring
+- **syncroid**: 
+  - clarify sync log with `source` and `dest` paths [`0ca4efd`](https://github.com/kh4f/syncroid/commit/0ca4efd)
+  - suppress removed files log when none are deleted [`15ad918`](https://github.com/kh4f/syncroid/commit/15ad918)
+
+##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.2.0...syncroid@0.6.0) &ensp;•&ensp; _Oct 31, 2025_
+
+
 ## &ensp; [` 📦 syncroid@0.5.0  `](https://github.com/kh4f/syncroid/compare/syncroid@0.4.0...syncroid@0.5.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
