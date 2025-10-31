@@ -1,6 +1,17 @@
 # Changelog
 
 
+## &ensp; [` 📦 vite-plugin-syncroid@0.3.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.2.0...vite-plugin-syncroid@0.3.0)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
+- **core**: re-export `UserConfig` type from `syncroid` [`eee8c6f`](https://github.com/kh4f/syncroid/commit/eee8c6f)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🧩 Dependencies
+- **peer-deps**: relax `vite` peer dependency to `^7.1` [`5f1a513`](https://github.com/kh4f/syncroid/commit/5f1a513)
+
+##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.2.0...vite-plugin-syncroid@0.3.0) &ensp;•&ensp; _Oct 31, 2025_
+
+
 ## &ensp; [` 📦 vite-plugin-syncroid@0.2.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.1.0...vite-plugin-syncroid@0.2.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ BREAKING CHANGES
