@@ -1,7 +1,7 @@
 # Changelog
 
 
-## &ensp; [` 📦 syncroid@0.6.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.2.0...syncroid@0.6.0)
+## &ensp; [` 📦 v0.6.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.2.0...syncroid@0.6.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
 - **config**: add support for external config file with priority [`b0c004b`](https://github.com/kh4f/syncroid/commit/b0c004b)
@@ -19,7 +19,7 @@
 ##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.2.0...syncroid@0.6.0) &ensp;•&ensp; _Oct 31, 2025_
 
 
-## &ensp; [` 📦 syncroid@0.5.0  `](https://github.com/kh4f/syncroid/compare/syncroid@0.4.0...syncroid@0.5.0)
+## &ensp; [` 📦 v0.5.0  `](https://github.com/kh4f/syncroid/compare/syncroid@0.4.0...syncroid@0.5.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
 - **core**: export types from `@/types` in package entrypoint [`1cb253c`](https://github.com/kh4f/syncroid/commit/1cb253c)
@@ -27,7 +27,7 @@
 ##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/syncroid@0.4.0...syncroid@0.5.0) &ensp;•&ensp; _Oct 30, 2025_
 
 
-## &ensp; [` 📦 syncroid@0.4.0  `](https://github.com/kh4f/syncroid/compare/syncroid@0.3.0...syncroid@0.4.0)
+## &ensp; [` 📦 v0.4.0  `](https://github.com/kh4f/syncroid/compare/syncroid@0.3.0...syncroid@0.4.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ BREAKING CHANGES
 - Removed support for `verbose` value in `logLevel` config property. <sup>[1]</sup>
@@ -48,7 +48,7 @@
 ##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/syncroid@0.3.0...syncroid@0.4.0) &ensp;•&ensp; _Oct 30, 2025_
 
 
-## &ensp; [` 📦 syncroid@0.3.0  `](https://github.com/kh4f/syncroid/compare/syncroid@0.2.0...syncroid@0.3.0)
+## &ensp; [` 📦 v0.3.0  `](https://github.com/kh4f/syncroid/compare/syncroid@0.2.0...syncroid@0.3.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ BREAKING CHANGES
 - The `include`, `exclude`, and `aggregatePaths` options have been removed. Syncroid now performs a full directory sync. <sup>[1]</sup>
@@ -69,7 +69,7 @@
 ##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/syncroid@0.2.0...syncroid@0.3.0) &ensp;•&ensp; _Oct 30, 2025_
 
 
-## &ensp; [` 📦 syncroid@0.2.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.1.0...syncroid@0.2.0)
+## &ensp; [` 📦 v0.2.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.1.0...syncroid@0.2.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ BREAKING CHANGES
 - `include` and `exclude` config options have been renamed to `includePattern` and `excludePatterns`. <sup>[1]</sup>
@@ -90,7 +90,7 @@
 ##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.1.0...syncroid@0.2.0) &ensp;•&ensp; _Oct 26, 2025_
 
 
-## &ensp; [` 📦 syncroid@0.1.0  `](https://github.com/kh4f/syncroid/commits/syncroid@0.1.0)
+## &ensp; [` 📦 v0.1.0  `](https://github.com/kh4f/syncroid/commits/syncroid@0.1.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
 - remove entry from destination before pushing if entry is a directory [`7484a51`](https://github.com/kh4f/syncroid/commit/7484a51)

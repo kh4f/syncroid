@@ -1,7 +1,7 @@
 # Changelog
 
 
-## &ensp; [` 📦 vite-plugin-syncroid@0.3.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.2.0...vite-plugin-syncroid@0.3.0)
+## &ensp; [` 📦 v0.3.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.2.0...vite-plugin-syncroid@0.3.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
 - **core**: re-export `UserConfig` type from `syncroid` [`eee8c6f`](https://github.com/kh4f/syncroid/commit/eee8c6f)
@@ -12,7 +12,7 @@
 ##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.2.0...vite-plugin-syncroid@0.3.0) &ensp;•&ensp; _Oct 31, 2025_
 
 
-## &ensp; [` 📦 vite-plugin-syncroid@0.2.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.1.0...vite-plugin-syncroid@0.2.0)
+## &ensp; [` 📦 v0.2.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.1.0...vite-plugin-syncroid@0.2.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ BREAKING CHANGES
 - The plugin parameters have been updated to match the new `syncroid` signature. <sup>[1]</sup>
@@ -26,7 +26,7 @@
 ##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.1.0...vite-plugin-syncroid@0.2.0) &ensp;•&ensp; _Oct 30, 2025_
 
 
-## &ensp; [` 📦 vite-plugin-syncroid@0.1.0  `](https://github.com/kh4f/syncroid/commits/vite-plugin-syncroid@0.1.0)
+## &ensp; [` 📦 v0.1.0  `](https://github.com/kh4f/syncroid/commits/vite-plugin-syncroid@0.1.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
 - **core**: add initial Vite plugin implementation with sync on `closeBundle` [`28345a0`](https://github.com/kh4f/syncroid/commit/28345a0)
