@@ -5,7 +5,10 @@ export const baseConfig: UserConfig = {
 	_default: {
 		lifecycle: 'all',
 		bump: ['package.json'],
-		changelog: { review: true },
+		changelog: {
+			review: true,
+			partials: { releaseTitle: 'v{{newVersion}}' },
+		},
 		commit: {
 			gpgSign: true,
 			message: 'release({{package.name}}): v{{newVersion}}',
