@@ -10,7 +10,7 @@
 	"keywords": ["syncroid", "vite-plugin-syncroid", "vite-syncroid", "adb", "adb-sync", "adb-nodejs", "vite-adb"],
 	"files": ["dist"],
 	"engines": { "node": "^24.11.0" },
-	"packageManager": "pnpm@10.18.1",
+	"packageManager": "pnpm@10.20.0",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"type": "module",
