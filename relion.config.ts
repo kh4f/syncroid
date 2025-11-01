@@ -1,6 +1,7 @@
 import { type UserConfig } from 'relion'
 
 export const baseConfig: UserConfig = {
+	context: { isMonorepo: true },
 	_default: {
 		lifecycle: 'all',
 		bump: ['package.json'],
@@ -14,7 +15,7 @@ export const baseConfig: UserConfig = {
 	_github: {
 		lifecycle: ['changelog'],
 		logLevel: 'silent',
-		context: { commitRefLinks: false, footerChangelogUrl: true, isMonorepo: true },
+		context: { commitRefLinks: false, footerChangelogUrl: true },
 		changelog: {
 			output: 'stdout',
 			commitRange: 'latest-release',
