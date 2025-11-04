@@ -12,7 +12,7 @@
 		"@stylistic/eslint-plugin": "^5.5.0",
 		"@types/node": "^24.9.2",
 		"eslint": "^9.39.0",
-		"globals": "^16.4.0",
+		"globals": "^16.5.0",
 		"jiti": "^2.6.1",
 		"relion": "^0.31.0",
 		"tsdown": "^0.15.12",
