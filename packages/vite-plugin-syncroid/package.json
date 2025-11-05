@@ -24,7 +24,7 @@
 		"release:github": "pnpm relion -p github"
 	},
 	"dependencies": {
-		"syncroid": "workspace:*"
+		"syncroid": "workspace:>=0.6.0"
 	},
 	"devDependencies": {
 		"vite": "^7.1.12"

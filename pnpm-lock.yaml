@@ -51,7 +51,7 @@ importers:
   packages/vite-plugin-syncroid:
     dependencies:
       syncroid:
-        specifier: workspace:*
+        specifier: workspace:>=0.6.0
         version: link:../syncroid
     devDependencies:
       vite:
