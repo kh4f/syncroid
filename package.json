@@ -3,6 +3,7 @@
 	"scripts": {
 		"build": "pnpm -r build",
 		"build:prod": "pnpm -r build:prod",
+		"build:watch": "pnpm -r build:watch",
 		"lint": "pnpm -r lint",
 		"lint:fix": "pnpm -r lint:fix",
 		"prepare": "git config core.hooksPath .githooks"
