@@ -7,10 +7,7 @@ export const baseConfig: UserConfig = {
 		lifecycle: 'all',
 		bump: ['package.json'],
 		changelog: { review: true },
-		commit: {
-			gpgSign: true,
-			message: 'release({{package.name}}): v{{newVersion}}',
-		},
+		commit: { gpgSign: true, message: 'release({{package.name}}): v{{newVersion}}' },
 		tag: { gpgSign: true },
 	},
 	_github: {
