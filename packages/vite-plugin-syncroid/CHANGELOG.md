@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 v0.3.1  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.3.0...vite-plugin-syncroid@0.3.1)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🧩 Dependencies
+- **deps**: change `syncroid` dependency from `workspace:*` to `workspace:>=0.6.0` [`b17973a`](https://github.com/kh4f/syncroid/commit/b17973a)
+
+##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.3.0...vite-plugin-syncroid@0.3.1) &ensp;•&ensp; _Nov 6, 2025_
+
+
 ## &ensp; [` 📦 v0.3.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.2.0...vite-plugin-syncroid@0.3.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
