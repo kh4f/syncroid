@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 v0.6.1  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.3.0...syncroid@0.6.1)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🩹 Fixes
+- **syncroid**: prepend destination path to files before removal [`66bd333`](https://github.com/kh4f/syncroid/commit/66bd333)
+
+##### &emsp;&ensp;&nbsp;&nbsp; [_All Release Commits_](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.3.0...syncroid@0.6.1) &ensp;•&ensp; _Nov 6, 2025_
+
+
 ## &ensp; [` 📦 v0.6.0  `](https://github.com/kh4f/syncroid/compare/vite-plugin-syncroid@0.2.0...syncroid@0.6.0)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ Features
