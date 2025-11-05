@@ -18,7 +18,7 @@ export default async function syncroid(config: UserConfig) {
 	for (const destFile of destFiles)
 		if (!sourceFiles.includes(destFile)) filesToRemove.push(destFile)
 
-	if (filesToRemove.length) run('adb', ['shell', 'rm', '-rf', ...filesToRemove])
+	if (filesToRemove.length) run('adb', ['shell', 'rm', '-rf', ...filesToRemove.map(f => `"${join(dest, f)}"`)])
 
 	for (const sourceFile of sourceFiles)
 		run('adb', ['push', join(source, sourceFile), join(dest, sourceFile), '--sync'])
