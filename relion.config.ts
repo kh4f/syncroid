@@ -2,13 +2,11 @@ import { type UserConfig } from 'relion'
 
 export const baseConfig: UserConfig = {
 	context: { isMonorepo: true },
+	changelog: { partials: { releaseTitle: 'v{{newVersion}}' } },
 	_default: {
 		lifecycle: 'all',
 		bump: ['package.json'],
-		changelog: {
-			review: true,
-			partials: { releaseTitle: 'v{{newVersion}}' },
-		},
+		changelog: { review: true },
 		commit: {
 			gpgSign: true,
 			message: 'release({{package.name}}): v{{newVersion}}',
