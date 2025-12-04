@@ -27,7 +27,7 @@
 		"syncroid": "workspace:*"
 	},
 	"devDependencies": {
-		"vite": "^7.2.4"
+		"vite": "^7.2.6"
 	},
 	"peerDependencies": {
 		"vite": "^7.1"
